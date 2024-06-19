@@ -60,7 +60,7 @@ public:
 	SMS_STS();
 	SMS_STS(u8 End);
 	SMS_STS(u8 End, u8 Level);
-	virtual int WritePosEx(u8 ID, s16 Position, u16 Speed, u8 ACC = 0);//普通写单个舵机位置指令
+	virtual int WritePosEx(u8 ID, s16 Position, u16 Speed = 0, u8 ACC = 0);//普通写单个舵机位置指令
 	virtual int RegWritePosEx(u8 ID, s16 Position, u16 Speed, u8 ACC = 0);//异步写单个舵机位置指令(RegWriteAction生效)
 	virtual void SyncWritePosEx(u8 ID[], u8 IDN, s16 Position[], u16 Speed[], u8 ACC[]);//同步写多个舵机位置指令
 	virtual int WheelMode(u8 ID);//恒速模式
